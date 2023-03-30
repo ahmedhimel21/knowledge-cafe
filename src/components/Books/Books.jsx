@@ -32,7 +32,7 @@ const Books = () => {
           <Book book={book} key={book.id} handReadTime={handReadTime}></Book>
         ))}
       </div>
-      <div className="">
+      <div>
         <AddToCart readTime={readTime}></AddToCart>
       </div>
     </div>
