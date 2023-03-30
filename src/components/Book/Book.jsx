@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Book = (props) => {
-  console.log(props.book);
-  const { cover_img, author_name, author_img, title, read_time } = props.book;
+  const { cover_img, author_name, author_img, title, read_time } = props?.book;
+  const handReadTime = props.handReadTime;
   return (
     <>
       <div className="card w-full bg-base-100 shadow-xl mt-5 border-t-2 border-slate-200 p-5">
@@ -31,7 +31,7 @@ const Book = (props) => {
           </div>
           <h1 className="font-bold text-3xl mt-5 ms-4">{title}</h1>
           <div className="mt-5">
-          <button className="btn btn-link">Mark as read</button>
+          <button onClick={()=>handReadTime(read_time)} className="btn btn-link">Mark as read</button>
           </div>
       </div>
     </>
