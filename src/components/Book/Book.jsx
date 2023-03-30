@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Book = (props) => {
   console.log(props.book);
@@ -12,13 +14,25 @@ const Book = (props) => {
             alt="bookCoverImage"
           />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        
+          <div className="flex justify-between mt-5">
+            <div className="flex gap-4">
+              <img className="w-[60px] h-[60px] rounded-full" src={author_img} alt="" />
+              <div>
+              <h1 className="text-xl font-bold">{author_name}</h1>
+              <p>Mar 14 (4 Days ago)</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <p>{read_time} min read </p>
+              <span><FontAwesomeIcon icon={faBookBookmark} /></span>
+            </div>
           </div>
-        </div>
+          <h1 className="font-bold text-3xl mt-5 ms-4">{title}</h1>
+          <div className="mt-5">
+          <button className="btn btn-link">Mark as read</button>
+          </div>
       </div>
     </>
   );
