@@ -8,7 +8,8 @@
     "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/S/amzn-author-media-prod/rec58e62v0epfogin4i1o6mu55._SX450_.jpg",
     "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
     "read_time": 300,
-    "quantity": 0
+    "quantity": 0,
+    "publish_in": "October 16, 2018"
   },
   {
     "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
@@ -18,7 +19,8 @@
     "author_img": "https://images.gr-assets.com/authors/1506341147p8/14229486.jpg",
     "title": "Dopamine Detox: A Short Guide to Remove Distractions and Get Your Brain to Do Hard Things",
     "read_time": 200,
-    "quantity": 0
+    "quantity": 0,
+    "publish_in":"July 4, 2021"
   },
   {
     "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
@@ -28,7 +30,8 @@
     "author_img": "https://i.harperapps.com/authors/51503/x500.JPG",
     "title": "Social Engineering: The Art of Human Hacking",
     "read_time": 280,
-    "quantity": 0
+    "quantity": 0,
+    "publish_in":"November 29, 2010"
   },
   {
     "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
@@ -39,6 +42,7 @@
     "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61b7VTCUEfL._SY600_.jpg",
     "title": "Clean Code: A Handbook of Agile Software Craftsmanship.",
     "read_time": 320,
-    "quantity": 0
+    "quantity": 0,
+    "publish_in":"August 1, 2008"
   }
 ]

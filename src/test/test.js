@@ -1,0 +1,1 @@
+<p className='text-xl font-semibold shadow-lg mt-5 p-3'>{singleCart.title}</p>

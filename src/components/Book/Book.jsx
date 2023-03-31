@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Book = (props) => {
-  const { cover_img, author_name, author_img, title, read_time,id } = props?.book;
+  const { cover_img, author_name, author_img, title, read_time,id,publish_in } = props?.book;
   const handleReadTime = props.handleReadTime;
   const handleBookMark = props.handleBookMark;
 
@@ -22,7 +22,7 @@ const Book = (props) => {
               <img className="w-[60px] h-[60px] rounded-full" src={author_img} alt="" />
               <div>
               <h1 className="text-xl font-bold">{author_name}</h1>
-              <p>Mar 14 (4 Days ago)</p>
+              <p>{publish_in}</p>
               </div>
             </div>
 

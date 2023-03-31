@@ -4,7 +4,7 @@ import Book from "../Book/Book";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
-  const [readTime,setReadTime] = useState('');
+  const [readTime,setReadTime] = useState(0);
   const [cart,setCart] = useState([])
 
   const handleReadTime = (time) =>{
@@ -22,7 +22,8 @@ const Books = () => {
   
   const handleBookMark = (book) =>{
     const newCart = [...cart,book];
-    setCart(newCart);
+      setCart(newCart);
+
   }
 
   useEffect(() => {
