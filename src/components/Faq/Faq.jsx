@@ -8,7 +8,7 @@ const Faq = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 mx-5">
-        <article className="shadow-xl p-5">
+        <article className="shadow-xl p-5 rounded-lg">
           <h1 className="text-3xl font-semibold mb-2 border-t-2 border-slate-200">
             Props vs state
           </h1>
@@ -25,7 +25,7 @@ const Faq = () => {
             the state. useState are mutable.
           </p>
         </article>
-        <article className="shadow-xl p-5">
+        <article className="shadow-xl p-5 rounded-lg">
           <h1 className="text-3xl font-semibold mb-2 border-t-2 border-slate-200">
             How does useState work?
           </h1>
@@ -35,7 +35,7 @@ const Faq = () => {
             component changed the state.
           </p>
         </article>
-        <article className="shadow-xl p-5">
+        <article className="shadow-xl p-5 rounded-lg">
           <h1 className="text-3xl font-semibold mb-2 border-t-2 border-slate-200">
             Purpose of useEffect other than fetching data.
           </h1>
@@ -47,7 +47,7 @@ const Faq = () => {
             found with this value.
           </p>
         </article>
-        <article className="shadow-xl p-5">
+        <article className="shadow-xl p-5 rounded-lg">
           <h1 className="text-3xl font-semibold mb-2 border-t-2 border-slate-200">
             How Does React work?
           </h1>
