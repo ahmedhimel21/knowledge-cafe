@@ -3,10 +3,11 @@ import React from "react";
 const Faq = () => {
   return (
     <>
-      <h1 className="mt-5 text-center text-3xl font-bold">
-        Frequently Asked Questions
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-5 gap-5 mx-5">
+      <div className="mt-5 border-1 border-[#6047EC] bg-violet-100 text-center p-3 rounded-lg font-semibold text-xl text-[#6047EC] w-full shadow-lg">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 mx-5">
         <article className="shadow-xl p-5">
           <h1 className="text-3xl font-semibold mb-2 border-t-2 border-slate-200">
             Props vs state

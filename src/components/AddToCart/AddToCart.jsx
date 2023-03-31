@@ -26,12 +26,15 @@ const AddToCart = (props) => {
       </div>
       <div className="border-t-2 border-slate-200 mt-2 rounded-lg bg-slate-50">
         <h1 className="text-xl font-bold p-5">
-          Bookmarked Blogs : {props.cart.length}
+          Bookmarked Blogs : {props.title.length}
         </h1>
         <div>
-          {props.cart.map((singleCart) => (
-            <p className="text-xl font-semibold shadow-lg mt-5 p-3 border-t-2 border-slate-200">
-              {singleCart.title}
+          {props.title.map((singleCartTitle) => (
+            <p
+              key={singleCartTitle.id}
+              className="text-xl font-semibold shadow-lg mt-5 p-3 border-t-2 border-slate-200"
+            >
+              {singleCartTitle.title}
             </p>
           ))}
         </div>

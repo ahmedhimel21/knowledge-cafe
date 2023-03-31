@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import AddToCart from "../AddToCart/AddToCart";
 import Book from "../Book/Book";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [readTime,setReadTime] = useState(0);
-  const [cart,setCart] = useState([])
+  const [title,setTitle] = useState([]);
 
   const handleReadTime = (time) =>{
     const previousReadTime = JSON.parse(localStorage.getItem('read-time'));
@@ -19,13 +21,18 @@ const Books = () => {
       setReadTime(time);
     }
   }
-  
-  const handleBookMark = (book) =>{
-    const newCart = [...cart,book];
-      setCart(newCart);
+
+  const handleBookMark = (bookTitle) =>{
+    const newCart = title.find((tl) => tl.id === bookTitle.id);
+    if(newCart){
+      alert('already exist')
+      setTitle([...title,bookTitle]);
+    }
+    else{
+      setTitle([...title,bookTitle]);
+    }
 
   }
-
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -48,7 +55,7 @@ const Books = () => {
       <div>
         <AddToCart 
         readTime={readTime}
-        cart={cart}
+        title={title}
         >
         </AddToCart>
       </div>
