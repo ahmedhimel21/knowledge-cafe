@@ -5,8 +5,9 @@ import Book from "../Book/Book";
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [readTime,setReadTime] = useState('');
+  const [cart,setCart] = useState([])
 
-  const handReadTime = (time) =>{
+  const handleReadTime = (time) =>{
     const previousReadTime = JSON.parse(localStorage.getItem('read-time'));
     if(previousReadTime){
       const sum = previousReadTime + time;
@@ -17,6 +18,11 @@ const Books = () => {
       localStorage.setItem('read-time',time);
       setReadTime(time);
     }
+  }
+  
+  const handleBookMark = (book) =>{
+    const newCart = [...cart,book];
+    setCart(newCart);
   }
 
   useEffect(() => {
@@ -29,11 +35,21 @@ const Books = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       <div className="col-span-3">
         {books?.map((book) => (
-          <Book book={book} key={book.id} handReadTime={handReadTime}></Book>
+          <Book 
+          book={book} key={book.id} 
+          books={books}
+          handleReadTime={handleReadTime}
+          handleBookMark={handleBookMark}
+          >
+          </Book>
         ))}
       </div>
       <div>
-        <AddToCart readTime={readTime}></AddToCart>
+        <AddToCart 
+        readTime={readTime}
+        cart={cart}
+        >
+        </AddToCart>
       </div>
     </div>
   );
