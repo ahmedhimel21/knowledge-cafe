@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import AddToCart from "../AddToCart/AddToCart";
 import Book from "../Book/Book";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -25,7 +24,7 @@ const Books = () => {
   const handleBookMark = (bookTitle) =>{
     const newCart = title.find((tl) => tl.id === bookTitle.id);
     if(newCart){
-      alert('already exist')
+      toast("Already Bookmarked !")
       setTitle([...title,bookTitle]);
     }
     else{
